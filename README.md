@@ -1,16 +1,26 @@
-# React + Vite
+# Quiz Application (React Practice)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Reactの基礎を体系的に習得し、フロントエンドの開発体力をつけるために作成したクイズアプリケーションです。
 
-Currently, two official plugins are available:
+## 💡 本プロジェクトのこだわり（AI非依存の開発）
+昨今、生成AIを用いて手軽にコードを出力・実装できる環境がありますが、本プロジェクトにおいては**「プログラミングの基礎ロジックを自分の頭で組み立てる」「ドキュメントを読み解く力を養う」**ことを目的としたため、**生成AIによるコード生成を一切使用していません。**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+以下のプロセスをすべて自力で試行錯誤しながら実装しました。
+* 公式ドキュメントや技術記事をベースにした技術選定・キャッチアップ
+* コンポーネントの分割設計
+* Reactにおける状態管理（useState等）の適切なハンドリング
+* 発生したバグに対する、論理的なデバッグ（ロジックの追跡）
 
-## React Compiler
+## 🛠️ 使用技術
+* **フロントエンド:** React (Vite / TypeScript または JavaScript)
+* **スタイリング:** CSS (または Tailwind CSS など、ご自身の環境に合わせて書き換えてください)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 主な機能
+* クイズの出題機能（選択肢のランダム表示など）
+* 正誤判定およびリアルタイムのスコア計算
+* 進捗度（現在の問題数 / 総問題数）の可視化
+* 結果画面での詳細なフィードバック
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 学んだこと・工夫した点
+* **ステート（状態）の最小化:** どのデータを状態として保持し、どのデータを既存の状態から計算（派生）させるべきかを意識し、不要な再レンダリングを防ぐ設計を学びました。
+* **コンポーネントの再利用性:** 問題表示部分、選択肢部分、結果画面などを適切な粒度でコンポーネント化し、コードの通読性を高めました。
